@@ -1,14 +1,18 @@
-const chalk { bgBlue: blue, bgRed: red, bgWhite: white} = require('chalk');
+const chalk = require('chalk');
 
-let shortRowOne = (`${blue(" * * * * * * * ")}${red("                                   ")}`);
-let shortRowTwo = (`${blue("  * * * * * *  ")}${white("                                   ")}`);
-let longRowOne = (`${white("                                                  ")}`);
-let longRowTwo = (`${red("                                                  ")}`);
+let blue = chalk.bgBlue;
+let red = chalk.bgRed;
+let white = chalk.bgWhite;
 
-let star = (String.fromCharCode(0x2606));
+let smallOne = (`${blue(" * * * * * * * ")}${red("                                   ")}`);
+let smallTwo = (`${blue("  * * * * * *  ")}${white("                                   ")}`);
+let bigOne = (`${white("                                                  ")}`);
+let bigTwo = (`${red("                                                  ")}`);
+
+let star = (String.fromCharCode(9733)); //0+2606 //0x2606
 let rep = /\*/gi;
-shortRowOne = shortRowOne.replace(rep, star);
-shortRowTwo = shortRowTwo.replace(rep, star);
+smallOne = smallOne.replace(rep, star);
+smallTwo = smallTwo.replace(rep, star);
 
 // var thirtyFive = "                                  ";
 
@@ -16,18 +20,18 @@ shortRowTwo = shortRowTwo.replace(rep, star);
 //     thirtyFiveSpace += thirtyFiveSpace[i];
 //   };
 
-console.log(shortRowOne);
-console.log(shortRowTwo);
-console.log(shortRowOne);
-console.log(shortRowTwo);
-console.log(shortRowOne);
-console.log(shortRowTwo);
-console.log(shortRowOne);
-console.log(longRowOne);
-console.log(longRowTwo);
-console.log(longRowOne);
-console.log(longRowTwo);
-console.log(longRowOne);
-console.log(longRowTwo);
+console.log(smallOne);
+console.log(smallTwo);
+console.log(smallOne);
+console.log(smallTwo);
+console.log(smallOne);
+console.log(smallTwo);
+console.log(smallOne);
+console.log(bigOne);
+console.log(bigTwo);
+console.log(bigOne);
+console.log(bigTwo);
+console.log(bigOne);
+console.log(bigTwo);
 
 
